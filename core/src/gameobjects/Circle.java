@@ -45,6 +45,7 @@ public class Circle extends Sprite {
 
         float xforce = (body.getPosition().x > BopGame.WIDTH/2/PPM) ?-15 : 15;
         body.applyLinearImpulse(new Vector2(xforce, 90), body.getPosition(), true);
+        //SFAIOivdasvijov
         shape.dispose();
     }
 
