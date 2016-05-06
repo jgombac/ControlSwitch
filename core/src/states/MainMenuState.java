@@ -11,9 +11,6 @@ public class MainMenuState extends State{
 
     private BitmapFont font;
 
-
-
-
     public MainMenuState(GameStateManager gsm) {
         super(gsm);
         initFonts();
