@@ -5,6 +5,9 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
+import java.util.Collections;
+
+import levels.Levels;
 import states.GameStateManager;
 import states.MainMenuState;
 
@@ -14,14 +17,20 @@ public class BopGame extends ApplicationAdapter {
 
 	SpriteBatch sb;
 	GameStateManager gsm;
+	public static Levels levels;
 
-	
+
+
 	@Override
 	public void create () {
 		sb = new SpriteBatch();
 		gsm = new GameStateManager();
-//		WIDTH = Gdx.graphics.getWidth();
-//		HEIGHT = Gdx.graphics.getHeight();
+
+
+		levels = new Levels(1);
+		
+		WIDTH = Gdx.graphics.getWidth();
+    	HEIGHT = Gdx.graphics.getHeight();
 		gsm.push(new MainMenuState(gsm));
 
 	}
@@ -36,7 +45,14 @@ public class BopGame extends ApplicationAdapter {
 	}
 
 	@Override
+	public void pause(){
+
+	}
+
+	@Override
 	public void dispose(){
 		gsm.dispose();
 	}
+
+
 }

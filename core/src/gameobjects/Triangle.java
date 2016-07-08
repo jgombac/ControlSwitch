@@ -30,6 +30,7 @@ public class Triangle {
         System.out.println(bdef.position);
         bdef.type = BodyDef.BodyType.DynamicBody;
         bdef.fixedRotation = true;
+
         body = world.createBody(bdef);
 
 
